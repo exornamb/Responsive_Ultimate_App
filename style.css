@@ -1,0 +1,374 @@
+/* GENERAL STYLES */
+/* Custom Properties(CSS variables) */
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;600&display=swap');
+:root {
+    --primary-color: rgb(219, 4, 4);
+    --bg-color: linear-gradient(to bottom right, #b52b2b, #FF0A0A);
+    --grey: #919294;
+}
+
+html {
+    /* THIS SETS THE FONT SIZE TO 10px */
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    /* THIS SETS FONT SIZE TO 16px */
+    font-size: 1.6rem;
+    font-family: "Poppins", sans-serif;
+}
+
+*{
+    /* Universal styles */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+img{
+    width: 100%;
+    border-radius: 5px;
+    display: block;
+    object-fit: cover;
+}
+
+article {
+    text-align: center;
+    width: 90%;
+    margin: auto;
+    padding: 5rem 0 5rem 0;
+}
+
+/* HEADER  */
+#logo{
+    display: none;
+}
+header{
+    background: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 300;
+    position: fixed;
+    width:100%;
+    z-index: 999;  /* control the vertical stacking order of elements that overlap each other */
+}
+
+nav a {
+    color: #fff;
+    padding: 0.0625em;
+    display: block;
+    font-weight: 500;
+    font-family: "Jost", sans-serif;
+}
+
+nav a:hover {
+    color: var(--primary-color);
+    background-color: white;
+    transition: 0.33;
+}
+
+  /* HERO SECTION */
+
+  #hero {
+    padding-top: 14rem;
+    color: #fff;
+    background: url(images/bg-hero.png), 
+    var(--bg-color);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+  }
+
+  h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+  }
+
+  #hero p {
+    font-size: 1.4rem;
+    margin-top: 1em;
+    font-weight: 300;
+  }
+
+  button {
+    border-radius: 15px;
+    padding: 0.8rem;
+    margin: 15px;
+    font-family: inherit;
+    border: 1px solid transparent;
+    border-color: #fff;
+    background: var(--bg-color);
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.5rem;
+  }
+
+  button:hover {
+    background: linear-gradient(to bottom right, #FF0A0A, #b52b2b);
+    transform: translateY(2px);
+  }
+
+
+   /* FEATURES SECTION */
+  h2, h3, h4 {
+    font-size: 3rem;
+    font-weight: 300;
+    padding: 0.2em;
+    margin-bottom: 1em;
+  }
+
+.features-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-weight: 100;
+}
+
+.feature-card {
+    font-size: 1.5rem;
+    border: 1px solid #fff;
+    background-color: #F0F6FF;
+    padding: 1.5em;
+    margin: 1.4rem;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
+.feature-icon {
+    font-size: 2.3rem;
+    width: 60px;
+    margin: auto;
+    text-align: center;
+    background: var(--bg-color);
+    border-radius: 45px;
+    color: #fff;
+    padding: 13px;
+}
+
+h6 {
+    font-size: 1.8rem;
+    margin: 5px;
+    margin-bottom: 5px;
+}
+
+ /* DOWNLOAD SECTION */
+
+ #download div p {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--grey);
+ }
+
+ .download-container {
+    background: var(--bg-color);
+    border-radius: 7px;
+    margin: 20px;
+ }
+
+.btn-download-container {
+    display: flex;
+    color: #fff;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 8px;
+}
+
+#download div:nth-child(2) p:nth-child(2) {
+    color: #fff;
+}
+
+.fa-apple, .fa-android {
+    font-size: 25px;
+}
+
+  /* CONTACT SECTION */
+
+  form input,textarea {
+    width: 94%;
+    border-radius: 10px;
+    border: 1px solid #ced4da;
+    background-color: #fff;
+    color: #252525;
+    margin: 10px 0 10px 0;
+    padding: 4px;
+    font-family: inherit;
+    font-size: 1.5rem;
+  }
+  textarea {
+    height: 150px;
+  }
+
+  form input:focus,textarea:focus {
+    outline: 2px solid #f83d3d;
+  }
+  .btn-submit {
+    margin: 15px;
+    padding: 15px;
+  }
+
+  /* FOOTER */
+
+footer {
+    background: url(images/bg-footer.png), 
+    var(--bg-color);
+    background-position: top;
+    background-repeat: no-repeat;
+    margin-top: 5rem;
+    padding-top: 16rem;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+footer ul li {
+    text-align: left;
+    margin: 10px;
+
+}
+h5 {
+    font-size: 1.6rem;
+    text-align: left;
+}
+.fab {
+    font-size: 25px;
+    margin: 3px;
+    cursor: pointer;
+}
+
+.footer-info {
+  margin-left: 20px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+
+/* MEDIA QUERY */
+
+@media (min-width:480px) {
+  header {
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #logo {
+    display: unset;
+    width: 80px;
+  }
+  nav a{
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-right: 0.8em;
+  }
+  nav ul {
+    display: flex;
+  }
+  .feature-card {
+    max-width: 270px;
+  }
+  .download-container {
+    max-width: 350px;
+    display: block;
+    margin: 85%;
+  }
+  form {
+    margin: auto;
+    width:85%
+  }
+}
+
+/* MEDIUM DEVICES - TABLES - 720px*/
+
+@media (min-width:720px) {
+  h1{
+    font-size: 5rem;
+  }
+  h2, h3, h4 {
+    font-size: 3.5rem;
+  }
+  #download img {
+    width: 70%;
+    margin: auto;
+  }
+  #download p, .btn-container {
+    width: 90%;
+    margin: auto;
+  }
+  .download-container {
+    margin: 10px;
+  }
+  .btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .fa-apple, .fa-android {
+    font-size: 46px;
+  }
+  form {
+    width: 524px;
+  }
+  .footer-info {
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+  }
+}
+
+@media (min-width:900px) {
+  #hero div img {
+    width: 50%;
+    margin: auto;
+  }
+}
+
+ /* LARGE DEVICES - LAPTOPS - 970PX */
+
+
+ @media (min-width:900px) {
+  #hero article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  #hero div img {
+    width: 100%;
+    margin: auto;
+    margin-top: 20px;
+  }
+  .download {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  #download div:nth-child(2) {
+    margin: auto;
+  }
+  .footer-info {
+    grid-template-columns: repeat(4, 1fr);
+  }
+ }
+
+ /* EXTRA LARGE - 1200PX */
+
+ @media (min-width:1200px) {
+  main, footer {
+    max-width: 1140px;
+    margin: auto;
+  }
+  header{
+    justify-content: space-around;
+  }
+ }
